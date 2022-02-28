@@ -2,13 +2,13 @@ version:  '3.1'
 
 services:
   app:
-    command: bash -c "python ./easy_start.py && python ./test/advt_reauests.py"
+    command: bash -c "python ./easy_start.py"
     depends_on:
       - db
     links:
       - db:db
     image: aiohttp_example
-    build:
+    build
       context: ./
       dockerfile: ./Dockerfile
     env_file:
